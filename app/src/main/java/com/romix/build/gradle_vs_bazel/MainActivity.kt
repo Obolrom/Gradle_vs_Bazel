@@ -14,5 +14,14 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
 
         appComponent.feat1Config.loadSnapshot(1)
+        appComponent.feat2Config.loadSnapshot(1)
+        appComponent.feat3Config.loadSnapshot(1)
+        appComponent.feat4Config.loadSnapshot(1)
+        appComponent.feat5Config.loadSnapshot(1)
+        appComponent.feat6Config.loadSnapshot(1)
+        appComponent.feat7Config.loadSnapshot(1)
+        appComponent.feat8Config.loadSnapshot(1)
+        appComponent.feat9Config.loadSnapshot(1)
+        appComponent.feat10Config.loadSnapshot(1)
     }
 }

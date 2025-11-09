@@ -43,6 +43,15 @@ dependencies {
     implementation(project(":core:network"))
 
     implementation(project(":feature:feat1"))
+    implementation(project(":feature:feat2"))
+    implementation(project(":feature:feat3"))
+    implementation(project(":feature:feat4"))
+    implementation(project(":feature:feat5"))
+    implementation(project(":feature:feat6"))
+    implementation(project(":feature:feat7"))
+    implementation(project(":feature:feat8"))
+    implementation(project(":feature:feat9"))
+    implementation(project(":feature:feat10"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -27,4 +27,12 @@ include(":core:ui")
 include(":core:network")
 
 include(":feature:feat1")
- 
+include(":feature:feat2")
+include(":feature:feat3")
+include(":feature:feat4")
+include(":feature:feat5")
+include(":feature:feat6")
+include(":feature:feat7")
+include(":feature:feat8")
+include(":feature:feat9")
+include(":feature:feat10")
