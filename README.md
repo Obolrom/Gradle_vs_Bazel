@@ -2,3 +2,9 @@
 ```bash
 ./gradlew assembleDebug
 ```
+
+---
+### How to build the project with Bazel
+```bash
+bazel build
+```
