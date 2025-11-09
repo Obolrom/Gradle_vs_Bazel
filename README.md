@@ -6,5 +6,5 @@
 ---
 ### How to build the project with Bazel
 ```bash
-bazel build
+bazel build //app:app
 ```
