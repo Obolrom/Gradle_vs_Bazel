@@ -1,0 +1,47 @@
+scenario-groups {
+    smoke-tests = ["clean_build", "incremental_feature_feat1", "incremental_core_feature_app", "no_op"]
+}
+
+clean_build {
+  title = "Clean Build"
+
+  cleanup-tasks = ["clean"]
+
+  tasks = [":app:assembleDebug"]
+
+  warm-ups = 3
+  iterations = 5
+}
+
+incremental_feature_feat1 {
+  title = "Incremental build after change in :feature:feat1"
+
+  tasks = [":app:assembleDebug"]
+
+  apply-abi-change-to = "feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt"
+
+  warm-ups = 3
+  iterations = 5
+}
+
+no_op {
+  title = "No-op build"
+
+  tasks = [":app:assembleDebug"]
+
+  warm-ups = 3
+  iterations = 5
+}
+
+incremental_core_feature_app {
+  title = "Incremental build after change in :core:model, :feature:feat1, :app"
+
+  tasks = [":app:assembleDebug"]
+
+  apply-abi-change-to = "core/model/src/main/java/com/romix/core/model/Models.kt"
+  apply-abi-change-to = "feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt"
+  apply-abi-change-to = "app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt"
+
+  warm-ups = 3
+  iterations = 5
+}
