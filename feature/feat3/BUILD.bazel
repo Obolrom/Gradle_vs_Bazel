@@ -1,14 +1,14 @@
 load("@rules_kotlin//kotlin:android.bzl", "kt_android_library")
 
 kt_android_library(
-    name = "feature_lib_2",
+    name = "feature_lib_3",
     srcs = glob(["src/main/java/**/*.kt"]),
-    manifest = "src/main/AndroidManifest.xml",
-    resource_files = glob(["src/main/res/**"]),
+#    # manifest = "src/main/AndroidManifest.xml",
+    # resource_files = glob(["src/main/res/**"]),
     deps = [
-        "//core:model:core_lib_model",
-        "//core:network:core_lib_network",
-        "//core:ui:core_lib_ui",
+        "//core/model:core_lib_model",
+        "//core/network:core_lib_network",
+        "//core/ui:core_lib_ui",
 
         "@maven//:androidx_activity_activity_ktx",
         "@maven//:androidx_core_core_ktx",

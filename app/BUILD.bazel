@@ -5,22 +5,25 @@ kt_android_library(
     name = "app_lib",
     srcs = glob(["src/main/java/**/*.kt"]),
     manifest = "src/main/AndroidManifest.xml",
-    resource_files = glob(["src/main/res/**"]),
+    resource_files = glob(
+        ["src/main/res/**"],
+        exclude = ["src/main/res/mipmap-anydpi/**"]
+    ),
     deps = [
-        "//core:model:core_lib_model",
-        "//core:network:core_lib_network",
-        "//core:ui:core_lib_ui",
+        "//core/model:core_lib_model",
+        "//core/network:core_lib_network",
+        "//core/ui:core_lib_ui",
 
-        "//feature:feat1:feature_lib_1",
-        "//feature:feat2:feature_lib_2",
-        "//feature:feat3:feature_lib_3",
-        "//feature:feat4:feature_lib_4",
-        "//feature:feat5:feature_lib_5",
-        "//feature:feat6:feature_lib_6",
-        "//feature:feat7:feature_lib_7",
-        "//feature:feat8:feature_lib_8",
-        "//feature:feat9:feature_lib_9",
-        "//feature:feat10:feature_lib_10",
+        "//feature/feat1:feature_lib_1",
+        "//feature/feat2:feature_lib_2",
+        "//feature/feat3:feature_lib_3",
+        "//feature/feat4:feature_lib_4",
+        "//feature/feat5:feature_lib_5",
+        "//feature/feat6:feature_lib_6",
+        "//feature/feat7:feature_lib_7",
+        "//feature/feat8:feature_lib_8",
+        "//feature/feat9:feature_lib_9",
+        "//feature/feat10:feature_lib_10",
 
         "@maven//:androidx_activity_activity_ktx",
         "@maven//:androidx_core_core_ktx",
@@ -37,7 +40,10 @@ android_binary(
     deps = [
         ":app_lib",
     ],
-    resource_files = glob(["src/main/res/**"]),
+    resource_files = glob(
+        ["src/main/res/**"],
+        exclude = ["src/main/res/mipmap-anydpi/**"]
+    ),
     manifest_values = {
         "minSdkVersion": "26",
         "targetSdkVersion": "34",

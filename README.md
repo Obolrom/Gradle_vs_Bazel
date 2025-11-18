@@ -19,3 +19,8 @@ brew install gradle-profiler
 ```bash
 gradle-profiler --benchmark --project-dir . --gradle-user-home ~/.gradle :app:assembleDebug
 ```
+
+#### Run a benchmark with given .scenario file & generate build scan report
+```bash
+gradle-profiler --benchmark --project-dir . --gradle-user-home ~/.gradle --profile buildscan --scenario-file gradle_benchmark_scenarios/feature_module_non_abi_change.scenario
+```

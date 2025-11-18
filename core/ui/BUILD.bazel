@@ -3,10 +3,10 @@ load("@rules_kotlin//kotlin:android.bzl", "kt_android_library")
 kt_android_library(
     name = "core_lib_ui",
     srcs = glob(["src/main/java/**/*.kt"]),
-    manifest = "src/main/AndroidManifest.xml",
-    resource_files = glob(["src/main/res/**"]),
+    # manifest = "src/main/AndroidManifest.xml",
+    # resource_files = glob(["src/main/res/**"]),
     deps = [
-        "//core:model:core_lib_model",
+        "//core/model:core_lib_model",
 
         "@maven//:androidx_activity_activity_ktx",
         "@maven//:androidx_core_core_ktx",
