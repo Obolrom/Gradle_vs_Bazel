@@ -58,7 +58,7 @@ incremental_core_feature_app {
     targets = ["build", "//app:app"]
   }
 
-  title = "Incremental build after change in :core:model, :feature:feat1, :app"
+  title = "Incremental build after change in :core:model :feature:feat1 :app"
 
   tasks = [":app:assembleDebug"]
 
