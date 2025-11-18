@@ -24,3 +24,8 @@ gradle-profiler --benchmark --project-dir . --gradle-user-home ~/.gradle :app:as
 ```bash
 gradle-profiler --benchmark --project-dir . --gradle-user-home ~/.gradle --profile buildscan --scenario-file gradle_benchmark_scenarios/feature_module_non_abi_change.scenario
 ```
+
+#### Run a BAZEL benchmark with given .scenario file & generate build scan report
+```bash
+gradle-profiler --benchmark --project-dir . --bazel --scenario-file bazel_benchmark_scenarios/benchmark.scenario
+```

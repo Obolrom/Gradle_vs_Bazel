@@ -1,0 +1,35 @@
+scenario-groups {
+    smoke-tests = ["no_op", "incremental_app"]
+}
+
+no_op {
+  title = "Bazel No-op build"
+
+  tasks = ["assemble"]
+
+  bazel {
+    # If empty, it will be inferred from BAZEL_HOME environment variable
+    # home = "/usr/local/bin/bazel"
+    targets = ["build", "//app:app"]
+  }
+
+  warm-ups = 3
+  iterations = 5
+}
+
+incremental_app {
+  title = "Bazel incremental build after non-ABI change in :app"
+
+  tasks = ["assemble"]
+
+  apply-non-abi-change-to = "app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt"
+
+  bazel {
+    # If empty, it will be inferred from BAZEL_HOME environment variable
+    # home = "/usr/local/bin/bazel"
+    targets = ["build", "//app:app"]
+  }
+
+  warm-ups = 3
+  iterations = 5
+}
