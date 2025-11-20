@@ -7,6 +7,13 @@ ROOT_DIR = Path(__file__).parent
 # path for modules
 DEFAULT_ROOT_FEATURE_DIR = ROOT_DIR / "feature"
 # base package
+CONFIG_SNIPPETS_DIR = ROOT_DIR / "generated_config"
+SETTINGS_SNIPPET_FILE = CONFIG_SNIPPETS_DIR / "settings_includes.gradle"
+APP_BUILD_GRADLE_SNIPPET_FILE = CONFIG_SNIPPETS_DIR / "app_build.gradle"
+APP_BUILD_BAZEL_SNIPPET_FILE = CONFIG_SNIPPETS_DIR / "app_build.bazel"
+APP_COMPONENT_IMPORTS_SNIPPET_FILE = CONFIG_SNIPPETS_DIR / "component_imports"
+APP_COMPONENT_CODE_SNIPPET_FILE = CONFIG_SNIPPETS_DIR / "component_code"
+APP_MAIN_ACTIVITY_CODE_SNIPPET_FILE = CONFIG_SNIPPETS_DIR / "main_activity"
 BASE_PACKAGE = "com.romix.feature"
 
 # ===== TEMPLATES =====
@@ -467,6 +474,66 @@ def create_feature_module(root_feature_dir: Path, index: int) -> None:
     print(f"Created module: {module_dir}")
 
 
+def write_settings_snippet(start: int, count: int) -> None:
+    CONFIG_SNIPPETS_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f'include(":feature:feat{i}")'
+        for i in range(start, start + count)
+    ]
+    SETTINGS_SNIPPET_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote settings includes to: {SETTINGS_SNIPPET_FILE}")
+
+
+def write_app_build_gradle_snippet(start: int, count: int) -> None:
+    CONFIG_SNIPPETS_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f'implementation(project(":feature:feat{i}"))'
+        for i in range(start, start + count)
+    ]
+    APP_BUILD_GRADLE_SNIPPET_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote app build.gradle to: {APP_BUILD_GRADLE_SNIPPET_FILE}")
+
+
+def write_app_build_bazel_snippet(start: int, count: int) -> None:
+    CONFIG_SNIPPETS_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f'"//feature/feat{i}:feature_lib_{i}",'
+        for i in range(start, start + count)
+    ]
+    APP_BUILD_BAZEL_SNIPPET_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote app BUILD.bazel to: {APP_BUILD_BAZEL_SNIPPET_FILE}")
+
+
+def write_app_component_imports_snippet(start: int, count: int) -> None:
+    CONFIG_SNIPPETS_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f'import com.romix.feature.feat{i}.Feat{i}Repository'
+        for i in range(start, start + count)
+    ]
+    APP_COMPONENT_IMPORTS_SNIPPET_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote app BUILD.bazel to: {APP_COMPONENT_IMPORTS_SNIPPET_FILE}")
+
+
+def write_app_component_code_snippet(start: int, count: int) -> None:
+    CONFIG_SNIPPETS_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f'val feat{i}Config = Feat{i}Repository()'
+        for i in range(start, start + count)
+    ]
+    APP_COMPONENT_CODE_SNIPPET_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote app BUILD.bazel to: {APP_COMPONENT_CODE_SNIPPET_FILE}")
+
+
+def write_main_activity_code_snippet(start: int, count: int) -> None:
+    CONFIG_SNIPPETS_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f'appComponent.feat{i}Config.loadSnapshot(1)'
+        for i in range(start, start + count)
+    ]
+    APP_MAIN_ACTIVITY_CODE_SNIPPET_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote app BUILD.bazel to: {APP_MAIN_ACTIVITY_CODE_SNIPPET_FILE}")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate feature/featN modules with Bazel/Gradle/Kotlin files."
@@ -496,6 +563,13 @@ def main():
 
     for i in range(start, start + count):
         create_feature_module(root_feature_dir=root_feature_dir, index=i)
+
+    write_settings_snippet(start, count)
+    write_app_build_gradle_snippet(start, count)
+    write_app_build_bazel_snippet(start, count)
+    write_app_component_imports_snippet(start, count)
+    write_app_component_code_snippet(start, count)
+    write_main_activity_code_snippet(start, count)
 
 
 if __name__ == "__main__":
