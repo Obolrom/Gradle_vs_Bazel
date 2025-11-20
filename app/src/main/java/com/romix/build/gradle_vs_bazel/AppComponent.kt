@@ -50,6 +50,56 @@ import com.romix.feature.feat47.Feat47Repository
 import com.romix.feature.feat48.Feat48Repository
 import com.romix.feature.feat49.Feat49Repository
 import com.romix.feature.feat50.Feat50Repository
+import com.romix.feature.feat51.Feat51Repository
+import com.romix.feature.feat52.Feat52Repository
+import com.romix.feature.feat53.Feat53Repository
+import com.romix.feature.feat54.Feat54Repository
+import com.romix.feature.feat55.Feat55Repository
+import com.romix.feature.feat56.Feat56Repository
+import com.romix.feature.feat57.Feat57Repository
+import com.romix.feature.feat58.Feat58Repository
+import com.romix.feature.feat59.Feat59Repository
+import com.romix.feature.feat60.Feat60Repository
+import com.romix.feature.feat61.Feat61Repository
+import com.romix.feature.feat62.Feat62Repository
+import com.romix.feature.feat63.Feat63Repository
+import com.romix.feature.feat64.Feat64Repository
+import com.romix.feature.feat65.Feat65Repository
+import com.romix.feature.feat66.Feat66Repository
+import com.romix.feature.feat67.Feat67Repository
+import com.romix.feature.feat68.Feat68Repository
+import com.romix.feature.feat69.Feat69Repository
+import com.romix.feature.feat70.Feat70Repository
+import com.romix.feature.feat71.Feat71Repository
+import com.romix.feature.feat72.Feat72Repository
+import com.romix.feature.feat73.Feat73Repository
+import com.romix.feature.feat74.Feat74Repository
+import com.romix.feature.feat75.Feat75Repository
+import com.romix.feature.feat76.Feat76Repository
+import com.romix.feature.feat77.Feat77Repository
+import com.romix.feature.feat78.Feat78Repository
+import com.romix.feature.feat79.Feat79Repository
+import com.romix.feature.feat80.Feat80Repository
+import com.romix.feature.feat81.Feat81Repository
+import com.romix.feature.feat82.Feat82Repository
+import com.romix.feature.feat83.Feat83Repository
+import com.romix.feature.feat84.Feat84Repository
+import com.romix.feature.feat85.Feat85Repository
+import com.romix.feature.feat86.Feat86Repository
+import com.romix.feature.feat87.Feat87Repository
+import com.romix.feature.feat88.Feat88Repository
+import com.romix.feature.feat89.Feat89Repository
+import com.romix.feature.feat90.Feat90Repository
+import com.romix.feature.feat91.Feat91Repository
+import com.romix.feature.feat92.Feat92Repository
+import com.romix.feature.feat93.Feat93Repository
+import com.romix.feature.feat94.Feat94Repository
+import com.romix.feature.feat95.Feat95Repository
+import com.romix.feature.feat96.Feat96Repository
+import com.romix.feature.feat97.Feat97Repository
+import com.romix.feature.feat98.Feat98Repository
+import com.romix.feature.feat99.Feat99Repository
+import com.romix.feature.feat100.Feat100Repository
 
 class AppComponent {
 
@@ -103,4 +153,54 @@ class AppComponent {
     val feat48Config = Feat48Repository()
     val feat49Config = Feat49Repository()
     val feat50Config = Feat50Repository()
+    val feat51Config = Feat51Repository()
+    val feat52Config = Feat52Repository()
+    val feat53Config = Feat53Repository()
+    val feat54Config = Feat54Repository()
+    val feat55Config = Feat55Repository()
+    val feat56Config = Feat56Repository()
+    val feat57Config = Feat57Repository()
+    val feat58Config = Feat58Repository()
+    val feat59Config = Feat59Repository()
+    val feat60Config = Feat60Repository()
+    val feat61Config = Feat61Repository()
+    val feat62Config = Feat62Repository()
+    val feat63Config = Feat63Repository()
+    val feat64Config = Feat64Repository()
+    val feat65Config = Feat65Repository()
+    val feat66Config = Feat66Repository()
+    val feat67Config = Feat67Repository()
+    val feat68Config = Feat68Repository()
+    val feat69Config = Feat69Repository()
+    val feat70Config = Feat70Repository()
+    val feat71Config = Feat71Repository()
+    val feat72Config = Feat72Repository()
+    val feat73Config = Feat73Repository()
+    val feat74Config = Feat74Repository()
+    val feat75Config = Feat75Repository()
+    val feat76Config = Feat76Repository()
+    val feat77Config = Feat77Repository()
+    val feat78Config = Feat78Repository()
+    val feat79Config = Feat79Repository()
+    val feat80Config = Feat80Repository()
+    val feat81Config = Feat81Repository()
+    val feat82Config = Feat82Repository()
+    val feat83Config = Feat83Repository()
+    val feat84Config = Feat84Repository()
+    val feat85Config = Feat85Repository()
+    val feat86Config = Feat86Repository()
+    val feat87Config = Feat87Repository()
+    val feat88Config = Feat88Repository()
+    val feat89Config = Feat89Repository()
+    val feat90Config = Feat90Repository()
+    val feat91Config = Feat91Repository()
+    val feat92Config = Feat92Repository()
+    val feat93Config = Feat93Repository()
+    val feat94Config = Feat94Repository()
+    val feat95Config = Feat95Repository()
+    val feat96Config = Feat96Repository()
+    val feat97Config = Feat97Repository()
+    val feat98Config = Feat98Repository()
+    val feat99Config = Feat99Repository()
+    val feat100Config = Feat100Repository()
 }
