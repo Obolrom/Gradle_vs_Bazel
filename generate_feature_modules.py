@@ -18,6 +18,11 @@ BASE_PACKAGE = "com.romix.feature"
 
 # ===== TEMPLATES =====
 
+GIT_IGNORE_TEMPLATE = """\
+/build
+
+"""
+
 BUILD_TEMPLATE = """\
 load("@rules_kotlin//kotlin:android.bzl", "kt_android_library")
 
@@ -443,11 +448,13 @@ def create_feature_module(root_feature_dir: Path, index: int) -> None:
     kotlin_dir.mkdir(parents=True, exist_ok=True)
 
     # path to files
+    gitignore_file = module_dir / ".gitignore"
     build_file = module_dir / "BUILD.bazel"
     gradle_file = module_dir / "build.gradle.kts"
     kotlin_file = kotlin_dir / f"{class_name}.kt"
 
     # file content generation
+    gitignore_content = render_template(GIT_IGNORE_TEMPLATE)
     build_content = render_template(
         BUILD_TEMPLATE,
         module_name=module_name,
@@ -467,6 +474,7 @@ def create_feature_module(root_feature_dir: Path, index: int) -> None:
         .replace("__PREFIX__", class_prefix)
     )
 
+    gitignore_file.write_text(gitignore_content, encoding="utf-8")
     build_file.write_text(build_content, encoding="utf-8")
     gradle_file.write_text(gradle_content, encoding="utf-8")
     kotlin_file.write_text(kotlin_content, encoding="utf-8")

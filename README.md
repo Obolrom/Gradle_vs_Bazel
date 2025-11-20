@@ -29,3 +29,9 @@ gradle-profiler --benchmark --project-dir . --gradle-user-home ~/.gradle --profi
 ```bash
 gradle-profiler --benchmark --project-dir . --bazel --scenario-file bazel_benchmark_scenarios/benchmark.scenario
 ```
+
+---
+### How to generate feature modules
+```bash
+python3 generate_feature_modules.py START_INDEX MODULES_COUNT
+```
