@@ -1,0 +1,1172 @@
+
+* Started at 2025-11-21T11:52:45.723934690Z
+
+* Settings
+Project dir: /home/romix/StudioProjects/Gradle_vs_Bazel/.
+Output dir: /home/romix/StudioProjects/Gradle_vs_Bazel/profile-out
+Profiler: none
+Benchmark: true
+Versions: []
+Gradle User Home: /home/romix/StudioProjects/Gradle_vs_Bazel/gradle-user-home
+Targets: 'smoke-tests' (group)
+
+* Scenarios
+Scenario: Incremental build after change in :feature:feat1 using bazel
+  Targets: [build, //app:app]
+  Build changes: [ApplyAbiChangeToSourceFileMutator(/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt)]
+  Warm-ups: 3
+  Builds: 5
+Scenario: Incremental build after change in :core:model :feature:feat1 :app using bazel
+  Targets: [build, //app:app]
+  Build changes: [ApplyAbiChangeToSourceFileMutator(/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt)]
+  Warm-ups: 3
+  Builds: 5
+Scenario: No-op build using bazel
+  Targets: [build, //app:app]
+  Build changes: []
+  Warm-ups: 3
+  Builds: 5
+
+* Running scenario Incremental build after change in :feature:feat1 using bazel (scenario 1/3)
+
+* Running warm-up build #1
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Starting local Bazel server (8.4.2) and connecting to it...
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_kotlin+/kotlin/kotlin.bzl:101:10: kt_android_library should be loaded from //kotlin:android.bzl
+Analyzing: target //app:app (1 packages loaded, 0 targets configured)
+Analyzing: target //app:app (1 packages loaded, 0 targets configured)
+
+Analyzing: target //app:app (63 packages loaded, 260 targets configured)
+
+Analyzing: target //app:app (96 packages loaded, 2282 targets configured)
+
+Analyzing: target //app:app (215 packages loaded, 5252 targets configured)
+
+Analyzing: target //app:app (493 packages loaded, 5781 targets configured)
+
+Analyzing: target //app:app (745 packages loaded, 8758 targets configured)
+
+Analyzing: target //app:app (884 packages loaded, 9329 targets configured)
+
+Analyzing: target //app:app (987 packages loaded, 14339 targets configured)
+
+Analyzing: target //app:app (998 packages loaded, 16394 targets configured)
+
+Analyzing: target //app:app (1002 packages loaded, 18004 targets configured)
+
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/rules/coursier.bzl:754:18: Found duplicate artifact versions
+    com.google.guava:guava has multiple versions 32.1.2-android, 33.0.0-jre
+Please remove duplicate artifacts from the artifact list so you do not get unexpected artifact versions
+Analyzing: target //app:app (1002 packages loaded, 18004 targets configured)
+
+Analyzing: target //app:app (1002 packages loaded, 18004 targets configured)
+
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:3.141.59-fake should be interpreted as androidx.activity:activity:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:3.141.59-fake should be interpreted as androidx.activity:activity:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:3.141.59-fake should be interpreted as androidx.activity:activity:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:3.141.59-fake should be interpreted as androidx.core:core-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:3.141.59-fake should be interpreted as androidx.core:core-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:3.141.59-fake should be interpreted as androidx.core:core-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity-ktx:aar:1.9.0 should be interpreted as androidx.activity:activity-ktx:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:3.141.59-fake should be interpreted as androidx.core:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:3.141.59-fake should be interpreted as androidx.core:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:3.141.59-fake should be interpreted as androidx.core:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:3.141.59-fake should be interpreted as androidx.profileinstaller:profileinstaller:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:3.141.59-fake should be interpreted as androidx.profileinstaller:profileinstaller:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:3.141.59-fake should be interpreted as androidx.profileinstaller:profileinstaller:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.activity:activity:aar:1.9.0 should be interpreted as androidx.activity:activity:1.9.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.4.1 should be interpreted as androidx.annotation:annotation-experimental:1.4.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.4.1 should be interpreted as androidx.annotation:annotation-experimental:1.4.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.4.1 should be interpreted as androidx.annotation:annotation-experimental:1.4.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.4.1 should be interpreted as androidx.annotation:annotation-experimental:1.4.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.4.1 should be interpreted as androidx.annotation:annotation-experimental:1.4.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.4.1 should be interpreted as androidx.annotation:annotation-experimental:1.4.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:2.2.0 should be interpreted as androidx.arch.core:core-runtime:2.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:3.141.59-fake should be interpreted as androidx.core:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:3.141.59-fake should be interpreted as androidx.core:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:3.141.59-fake should be interpreted as androidx.core:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:1.17.0 should be interpreted as androidx.core:core-ktx:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:1.0.0 should be interpreted as androidx.core:core-viewtree:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:1.0.0 should be interpreted as androidx.core:core-viewtree:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:1.0.0 should be interpreted as androidx.core:core-viewtree:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:1.0.0 should be interpreted as androidx.core:core-viewtree:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:1.0.0 should be interpreted as androidx.core:core-viewtree:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:1.0.0 should be interpreted as androidx.core:core-viewtree:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:3.141.59-fake should be interpreted as androidx.annotation:annotation-experimental:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:3.141.59-fake should be interpreted as androidx.annotation:annotation-experimental:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:3.141.59-fake should be interpreted as androidx.annotation:annotation-experimental:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:3.141.59-fake should be interpreted as androidx.core:core-viewtree:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:3.141.59-fake should be interpreted as androidx.core:core-viewtree:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:3.141.59-fake should be interpreted as androidx.core:core-viewtree:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:3.141.59-fake should be interpreted as androidx.interpolator:interpolator:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:3.141.59-fake should be interpreted as androidx.interpolator:interpolator:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:3.141.59-fake should be interpreted as androidx.interpolator:interpolator:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:3.141.59-fake should be interpreted as androidx.versionedparcelable:versionedparcelable:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:3.141.59-fake should be interpreted as androidx.versionedparcelable:versionedparcelable:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:3.141.59-fake should be interpreted as androidx.versionedparcelable:versionedparcelable:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core:aar:1.17.0 should be interpreted as androidx.core:core:1.17.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:1.0.0 should be interpreted as androidx.interpolator:interpolator:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:1.0.0 should be interpreted as androidx.interpolator:interpolator:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:1.0.0 should be interpreted as androidx.interpolator:interpolator:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:1.0.0 should be interpreted as androidx.interpolator:interpolator:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:1.0.0 should be interpreted as androidx.interpolator:interpolator:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.interpolator:interpolator:aar:1.0.0 should be interpreted as androidx.interpolator:interpolator:1.0.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:3.141.59-fake should be interpreted as androidx.arch.core:core-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:3.141.59-fake should be interpreted as androidx.arch.core:core-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:3.141.59-fake should be interpreted as androidx.arch.core:core-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:3.141.59-fake should be interpreted as androidx.arch.core:core-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:3.141.59-fake should be interpreted as androidx.arch.core:core-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.arch.core:core-runtime:aar:3.141.59-fake should be interpreted as androidx.arch.core:core-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:3.141.59-fake should be interpreted as androidx.core:core-viewtree:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:3.141.59-fake should be interpreted as androidx.core:core-viewtree:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-viewtree:aar:3.141.59-fake should be interpreted as androidx.core:core-viewtree:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:3.141.59-fake should be interpreted as androidx.profileinstaller:profileinstaller:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:3.141.59-fake should be interpreted as androidx.profileinstaller:profileinstaller:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:3.141.59-fake should be interpreted as androidx.profileinstaller:profileinstaller:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-ktx:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime-ktx:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime-android:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-runtime-android:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-runtime:aar:2.9.3 should be interpreted as androidx.lifecycle:lifecycle-runtime:2.9.3@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-ktx:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:3.141.59-fake should be interpreted as androidx.core:core-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:3.141.59-fake should be interpreted as androidx.core:core-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.core:core-ktx:aar:3.141.59-fake should be interpreted as androidx.core:core-ktx:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-livedata-core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-livedata-core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-livedata-core:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-livedata-core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:3.141.59-fake should be interpreted as androidx.lifecycle:lifecycle-viewmodel:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.lifecycle:lifecycle-viewmodel:aar:2.6.1 should be interpreted as androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:3.141.59-fake should be interpreted as androidx.startup:startup-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:3.141.59-fake should be interpreted as androidx.startup:startup-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:3.141.59-fake should be interpreted as androidx.startup:startup-runtime:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.profileinstaller:profileinstaller:aar:1.4.0 should be interpreted as androidx.profileinstaller:profileinstaller:1.4.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:3.141.59-fake should be interpreted as androidx.savedstate:savedstate:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate-ktx:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate-ktx:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.savedstate:savedstate:aar:1.2.1 should be interpreted as androidx.savedstate:savedstate:1.2.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.startup:startup-runtime:aar:1.1.1 should be interpreted as androidx.startup:startup-runtime:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.2.0 should be interpreted as androidx.tracing:tracing:1.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.2.0 should be interpreted as androidx.tracing:tracing:1.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.2.0 should be interpreted as androidx.tracing:tracing:1.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.2.0 should be interpreted as androidx.tracing:tracing:1.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.2.0 should be interpreted as androidx.tracing:tracing:1.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.2.0 should be interpreted as androidx.tracing:tracing:1.2.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.versionedparcelable:versionedparcelable:aar:1.1.1 should be interpreted as androidx.versionedparcelable:versionedparcelable:1.1.1@aar
+Analyzing: target //app:app (1002 packages loaded, 18004 targets configured)
+
+Analyzing: target //app:app (1007 packages loaded, 18127 targets configured)
+
+Analyzing: target //app:app (1007 packages loaded, 18127 targets configured)
+
+Analyzing: target //app:app (1007 packages loaded, 18127 targets configured)
+
+Analyzing: target //app:app (1008 packages loaded, 18263 targets configured)
+
+Analyzing: target //app:app (1008 packages loaded, 18263 targets configured)
+
+Analyzing: target //app:app (1008 packages loaded, 18263 targets configured)
+
+Analyzing: target //app:app (1008 packages loaded, 18263 targets configured)
+
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.1.0 should be interpreted as androidx.annotation:annotation-experimental:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.1.0 should be interpreted as androidx.annotation:annotation-experimental:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.1.0 should be interpreted as androidx.annotation:annotation-experimental:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.1.0 should be interpreted as androidx.annotation:annotation-experimental:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:1.1.0 should be interpreted as androidx.annotation:annotation-experimental:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.6.1 should be interpreted as androidx.test.espresso:espresso-idling-resource:3.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.6.1 should be interpreted as androidx.test.espresso:espresso-idling-resource:3.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.6.1 should be interpreted as androidx.test.espresso:espresso-idling-resource:3.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.6.1 should be interpreted as androidx.test.espresso:espresso-idling-resource:3.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.6.1 should be interpreted as androidx.test.espresso:espresso-idling-resource:3.6.1@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:3.141.59-fake should be interpreted as androidx.test.services:storage:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:3.141.59-fake should be interpreted as androidx.test.services:storage:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:3.141.59-fake should be interpreted as androidx.test.services:storage:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:3.141.59-fake should be interpreted as androidx.test:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:3.141.59-fake should be interpreted as androidx.test:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:3.141.59-fake should be interpreted as androidx.test:core:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.ext:junit:aar:1.2.0-alpha01 should be interpreted as androidx.test.ext:junit:1.2.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:3.141.59-fake should be interpreted as androidx.test:annotation:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:3.141.59-fake should be interpreted as androidx.test:annotation:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:3.141.59-fake should be interpreted as androidx.test:annotation:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:1.5.0-alpha01 should be interpreted as androidx.test.services:storage:1.5.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:3.141.59-fake should be interpreted as androidx.annotation:annotation-experimental:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:3.141.59-fake should be interpreted as androidx.annotation:annotation-experimental:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.annotation:annotation-experimental:aar:3.141.59-fake should be interpreted as androidx.annotation:annotation-experimental:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:1.1.0-alpha01 should be interpreted as androidx.test:annotation:1.1.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:3.141.59-fake should be interpreted as androidx.test.services:storage:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:3.141.59-fake should be interpreted as androidx.test.services:storage:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.services:storage:aar:3.141.59-fake should be interpreted as androidx.test.services:storage:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:3.141.59-fake should be interpreted as androidx.test:annotation:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:3.141.59-fake should be interpreted as androidx.test:annotation:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:annotation:aar:3.141.59-fake should be interpreted as androidx.test:annotation:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:core:aar:1.6.0-alpha01 should be interpreted as androidx.test:core:1.6.0-alpha01@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:3.141.59-fake should be interpreted as androidx.tracing:tracing:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:1.7.2 should be interpreted as androidx.test:monitor:1.7.2@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.1.0 should be interpreted as androidx.tracing:tracing:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.1.0 should be interpreted as androidx.tracing:tracing:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.1.0 should be interpreted as androidx.tracing:tracing:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.1.0 should be interpreted as androidx.tracing:tracing:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.1.0 should be interpreted as androidx.tracing:tracing:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.tracing:tracing:aar:1.1.0 should be interpreted as androidx.tracing:tracing:1.1.0@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.141.59-fake should be interpreted as androidx.test.espresso:espresso-idling-resource:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.141.59-fake should be interpreted as androidx.test.espresso:espresso-idling-resource:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test.espresso:espresso-idling-resource:aar:3.141.59-fake should be interpreted as androidx.test.espresso:espresso-idling-resource:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+DEBUG: /home/romix/.cache/bazel/_bazel_romix/ac8247fe6c9f387c0e1341f4116ab0e1/external/rules_jvm_external+/private/lib/coordinates.bzl:76:18: Assuming androidx.test:monitor:aar:3.141.59-fake should be interpreted as androidx.test:monitor:3.141.59-fake@aar
+Analyzing: target //app:app (1009 packages loaded, 18762 targets configured)
+
+Analyzing: target //app:app (1009 packages loaded, 19403 targets configured)
+
+INFO: Analyzed target //app:app (1010 packages loaded, 19420 targets configured).
+[45 / 2,264] checking cached actions
+[1,122 / 5,246] [Prepa] JavaToolchainCompileBootClasspath external/rules_java+/toolchains/platformclasspath.jar
+[1,721 / 5,246] JavaToolchainCompileBootClasspath external/rules_java+/toolchains/platformclasspath.jar; 1s linux-sandbox ... (2 actions, 1 running)
+[3,478 / 5,246] JavaToolchainCompileBootClasspath external/rules_java+/toolchains/platformclasspath.jar; 2s linux-sandbox ... (2 actions running)
+[5,223 / 5,246] KotlinCompile //feature/feat1:feature_lib_1 { kt: 1, java: 0, srcjars: 0 } for k8; 2s worker ... (2 actions running)
+[5,226 / 5,246] KotlinCompile //feature/feat1:feature_lib_1 { kt: 1, java: 0, srcjars: 0 } for k8; 4s worker
+[5,227 / 5,246] [Prepa] Merging Kotlin output jar //feature/feat1:feature_lib_1 (Abi) from 1 inputs ... (2 actions, 0 running)
+[5,229 / 5,246] Desugaring feature/feat1/libfeature_lib_1.jar for Android; 1s worker ... (2 actions running)
+[5,230 / 5,246] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 2s worker ... (2 actions running)
+[5,231 / 5,246] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 6s worker
+[5,234 / 5,246] [Prepa] Desugaring app/app_migrated/app_final_resources.jar for Android
+[5,236 / 5,246] Desugaring app/libapp_lib.jar for Android; 1s worker
+[5,238 / 5,246] [Prepa] Building deploy jar app/app_deploy.jar ... (2 actions, 1 running)
+[5,239 / 5,246] Assembling dex files for app; 1s linux-sandbox ... (2 actions, 1 running)
+[5,240 / 5,246] Assembling dex files for app; 3s linux-sandbox
+[5,252 / 5,258] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[5,252 / 5,258] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[5,253 / 5,258] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 164.230s, Critical Path: 34.00s
+INFO: 22 processes: 5257 action cache hit, 1 internal, 16 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 22 total actions
+Execution time 165590 ms
+
+* Running warm-up build #2
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,405 / 4,425] KotlinCompile //feature/feat1:feature_lib_1 { kt: 1, java: 0, srcjars: 0 } for k8; 1s worker
+[4,408 / 4,425] Desugaring feature/feat1/libfeature_lib_1.jar for Android; 0s worker ... (2 actions running)
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 2s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 4s worker
+[4,412 / 4,425] [Prepa] Desugaring app/libapp_lib.jar for Android
+[4,418 / 4,425] Assembling dex files for app; 1s linux-sandbox ... (2 actions, 1 running)
+[4,419 / 4,425] Assembling dex files for app; 2s linux-sandbox
+[4,422 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 25.293s, Critical Path: 16.92s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 26524 ms
+
+* Running warm-up build #3
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,405 / 4,425] KotlinCompile //feature/feat1:feature_lib_1 { kt: 1, java: 0, srcjars: 0 } for k8; 1s worker
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 0s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 3s worker
+[4,413 / 4,425] [Prepa] Desugaring app/libapp_lib.jar for Android
+[4,417 / 4,425] Assembling dex files for app; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Assembling dex files for app; 1s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 3s linux-sandbox
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 0s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 22.574s, Critical Path: 14.65s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 23792 ms
+
+* Running measured build #1
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,406 / 4,425] [Prepa] Merging Kotlin output jar //feature/feat1:feature_lib_1 (Abi) from 1 inputs
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 4s worker
+[4,412 / 4,425] [Prepa] Desugaring app/libapp_lib.jar for Android
+[4,417 / 4,425] Building deploy jar app/app_deploy.jar; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Assembling dex files for app; 1s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 3s linux-sandbox
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 0s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 20.686s, Critical Path: 12.67s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 21935 ms
+
+* Running measured build #2
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,406 / 4,425] [Prepa] Merging Kotlin output jar //feature/feat1:feature_lib_1 (Abi) from 1 inputs ... (2 actions, 0 running)
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 3s worker
+[4,413 / 4,425] [Prepa] Desugaring app/libapp_lib.jar for Android
+[4,417 / 4,425] Building deploy jar app/app_deploy.jar; 1s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 3s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 20.100s, Critical Path: 12.35s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 21413 ms
+
+* Running measured build #3
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,406 / 4,425] [Prepa] Merging Kotlin output jar //feature/feat1:feature_lib_1 (Abi) from 1 inputs
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 3s worker
+[4,413 / 4,425] [Prepa] Desugaring app/libapp_lib.jar for Android
+[4,417 / 4,425] Building deploy jar app/app_deploy.jar; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Assembling dex files for app; 1s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 3s linux-sandbox
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 19.722s, Critical Path: 11.85s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 21317 ms
+
+* Running measured build #4
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 0s worker ... (2 actions, 1 running)
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 3s worker
+[4,413 / 4,425] [Prepa] Desugaring app/libapp_lib.jar for Android
+[4,417 / 4,425] Assembling dex files for app; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Assembling dex files for app; 1s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 2s linux-sandbox
+[4,426 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 19.282s, Critical Path: 11.44s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 20946 ms
+
+* Running measured build #5
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,406 / 4,425] [Prepa] Merging Kotlin output jar //feature/feat1:feature_lib_1 (Abi) from 1 inputs
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 3s worker
+[4,413 / 4,425] [Prepa] Desugaring app/app_migrated/app_final_resources.jar for Android
+[4,417 / 4,425] Building deploy jar app/app_deploy.jar; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Assembling dex files for app; 1s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 2s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 19.531s, Critical Path: 11.68s
+INFO: 18 processes: 31 action cache hit, 1 internal, 12 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 18 total actions
+Execution time 20818 ms
+
+* Running scenario Incremental build after change in :core:model :feature:feat1 :app using bazel (scenario 2/3)
+
+* Running warm-up build #1
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,406 / 4,425] [Prepa] Merging Kotlin output jar //feature/feat1:feature_lib_1 (Abi) from 1 inputs
+[4,409 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker ... (2 actions running)
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 2s worker
+[4,411 / 4,425] [Prepa] Merging Kotlin output jar //app:app_lib (Runtime) from 1 inputs
+[4,416 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Extracting Java resources from deploy jar for apk; 1s linux-sandbox ... (2 actions, 1 running)
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 20.696s, Critical Path: 12.88s
+INFO: 21 processes: 28 action cache hit, 1 internal, 15 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 21 total actions
+Execution time 22998 ms
+
+* Running warm-up build #2
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,415 / 4,425] Desugaring app/libapp_lib.jar for Android; 0s worker
+[4,416 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 0s linux-sandbox ... (2 actions running)
+[4,418 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 2s linux-sandbox
+[4,419 / 4,425] Assembling dex files for app; 0s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 18.377s, Critical Path: 10.41s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 20189 ms
+
+* Running warm-up build #3
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,415 / 4,425] Desugaring app/libapp_lib.jar for Android; 0s worker
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions, 1 running)
+[4,419 / 4,425] [Prepa] Assembling dex files for app
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 17.683s, Critical Path: 9.89s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 20076 ms
+
+* Running measured build #1
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,416 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 0s linux-sandbox ... (2 actions running)
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions, 1 running)
+[4,419 / 4,425] [Prepa] Assembling dex files for app
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,427 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 17.756s, Critical Path: 9.78s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 19819 ms
+
+* Running measured build #2
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,416 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions running)
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 2s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 17.407s, Critical Path: 9.64s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 19403 ms
+
+* Running measured build #3
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions, 1 running)
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 2s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 0s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 17.348s, Critical Path: 9.65s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 18665 ms
+
+* Running measured build #4
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,416 / 4,425] [Prepa] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions, 1 running)
+[4,419 / 4,425] [Prepa] Assembling dex files for app
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 17.940s, Critical Path: 10.02s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 19221 ms
+
+* Running measured build #5
+> Applying ABI change to '/home/romix/StudioProjects/Gradle_vs_Bazel/./app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt'
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,416 / 4,425] checking cached actions
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions, 1 running)
+[4,418 / 4,425] Extracting Java resources from deploy jar for apk; 1s linux-sandbox ... (2 actions, 1 running)
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,427 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 18.012s, Critical Path: 10.17s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 19308 ms
+
+* Running scenario No-op build using bazel (scenario 3/3)
+
+* Running warm-up build #1
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+[4,410 / 4,425] KotlinCompile //app:app_lib { kt: 2, java: 0, srcjars: 0 } for k8; 1s worker
+[4,416 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 1s linux-sandbox ... (2 actions running)
+[4,417 / 4,425] Dexing bazel-out/k8-fastbuild-android-ST-80dd4ae33d52/bin/app/_dx/app_lib/sdk-23libapp_lib.jar_desugared.jar with applicable dexopts []; 2s linux-sandbox ... (2 actions running)
+[4,419 / 4,425] Assembling dex files for app; 1s linux-sandbox
+[4,428 / 4,434] [Prepa] DexMerger app/dexfiles/app/1.shard.zip
+[4,428 / 4,434] DexMerger app/dexfiles/app/1.shard.zip; 1s linux-sandbox
+[4,429 / 4,434] [Prepa] Merging dex shards for @@//app:app.
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 18.349s, Critical Path: 10.20s
+INFO: 16 processes: 28 action cache hit, 1 internal, 12 linux-sandbox, 3 worker.
+INFO: Build completed successfully, 16 total actions
+Execution time 19661 ms
+
+* Running warm-up build #2
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.243s, Critical Path: 0.01s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 1437 ms
+
+* Running warm-up build #3
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.294s, Critical Path: 0.03s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 1596 ms
+
+* Running measured build #1
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.264s, Critical Path: 0.01s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 1602 ms
+
+* Running measured build #2
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.248s, Critical Path: 0.01s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 2027 ms
+
+* Running measured build #3
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.341s, Critical Path: 0.01s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 2147 ms
+
+* Running measured build #4
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.347s, Critical Path: 0.01s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 1538 ms
+
+* Running measured build #5
+  Command: [bazel, build, //app:app]
+  Environment: {}
+Running command bazel build //app:app
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+Analyzing: target //app:app (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed target //app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //app:app up-to-date:
+  bazel-bin/app/app_deploy.jar
+  bazel-bin/app/app_unsigned.apk
+  bazel-bin/app/app.apk
+INFO: Elapsed time: 0.264s, Critical Path: 0.01s
+INFO: 1 process: 21 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+Execution time 1552 ms
+
+* Results written to /home/romix/StudioProjects/Gradle_vs_Bazel/profile-out
+  /home/romix/StudioProjects/Gradle_vs_Bazel/profile-out/benchmark.csv
+  /home/romix/StudioProjects/Gradle_vs_Bazel/profile-out/benchmark.html
+
