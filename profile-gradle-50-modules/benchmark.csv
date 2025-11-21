@@ -1,0 +1,12 @@
+scenario,Incremental build after change in :feature:feat1,Incremental build after change in :core:model :feature:feat1 :app,No-op build
+version,Gradle 8.13,Gradle 8.13,Gradle 8.13
+tasks,:app:assembleDebug,:app:assembleDebug,:app:assembleDebug
+value,total execution time,total execution time,total execution time
+warm-up build #1,54013.28,44608.61,36851.78
+warm-up build #2,6821.98,4795.30,2046.48
+warm-up build #3,5621.84,3432.87,1998.75
+measured build #1,5160.26,3010.32,1646.36
+measured build #2,4498.33,2929.48,1474.82
+measured build #3,4684.11,3107.20,1624.06
+measured build #4,4244.75,2588.60,1266.66
+measured build #5,3732.49,2486.93,1319.76
