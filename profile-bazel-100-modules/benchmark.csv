@@ -1,0 +1,12 @@
+scenario,Incremental build after change in :feature:feat1,Incremental build after change in :core:model :feature:feat1 :app,No-op build
+version,bazel,bazel,bazel
+tasks,build //app:app,build //app:app,build //app:app
+value,total execution time,total execution time,total execution time
+warm-up build #1,131512.36,16024.98,12700.02
+warm-up build #2,19360.19,13210.86,1374.11
+warm-up build #3,17490.92,13205.00,2372.46
+measured build #1,16390.34,13439.87,2031.89
+measured build #2,15948.20,13384.66,1415.54
+measured build #3,15396.71,13329.42,1561.98
+measured build #4,15553.23,13210.25,2063.63
+measured build #5,15210.22,12509.85,1811.71
