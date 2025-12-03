@@ -51,8 +51,25 @@ docker run --rm \
   -v "$PWD/out":/out \
   -e GIT_URL="https://github.com/Obolrom/Gradle_vs_Bazel.git" \
   -e GIT_REF="main" \
+  -e MODE="build" \
   -e GRADLE_TASK=":app:assembleDebug" \
   -e GRADLE_ARGS="--max-workers=3" \
+  android-builder
+```
+
+### Run gradle-profiler with docker. With repository copying inside a container 
+```bash
+docker run --rm \
+  --memory 3g \
+  --cpuset-cpus="0-2" \
+  --cpus 3 \
+  -v "$PWD/out":/out \
+  -e GIT_URL="https://github.com/Obolrom/Gradle_vs_Bazel.git" \
+  -e GIT_REF="master" \
+  -e MODE="profiler" \
+  -e PROFILER_MODE="--benchmark" \
+  -e SCENARIO_FILE="gradle_benchmark_scenarios/benchmark.scenario" \
+  -e PROFILER_ARGS="--group smoke-tests" \
   android-builder
 ```
 
