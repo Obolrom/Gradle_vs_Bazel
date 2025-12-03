@@ -23,8 +23,8 @@ RUN yes | sdkmanager --licenses && \
 
 ENV GRADLE_USER_HOME=/gradle
 
-COPY docker/build-android.sh /usr/local/bin/build-android
-RUN chmod +x /usr/local/bin/build-android
+COPY docker/clone-and-build.sh /usr/local/bin/clone-and-build
+RUN chmod +x /usr/local/bin/clone-and-build
 
 WORKDIR /workspace
-ENTRYPOINT ["/usr/local/bin/build-android"]
+ENTRYPOINT ["/usr/local/bin/clone-and-build"]

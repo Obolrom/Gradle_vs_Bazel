@@ -31,7 +31,7 @@ gradle-profiler --benchmark --project-dir . --bazel --scenario-file bazel_benchm
 ```
 
 ---
-### Build with docker
+### Build with docker (build-android). With local repository
 ```bash
 docker run --rm \
   -v "$PWD":/workspace \
@@ -40,4 +40,23 @@ docker run --rm \
   -e GRADLE_TASK=":app:assembleDebug" \
   -e GRADLE_ARGS="--no-configuration-cache" \
   android-builder
+```
+
+### Build with docker. With repository copying inside a container
+```bash
+docker run --rm \
+  --memory 3g \
+  --cpuset-cpus="0-2" \
+  --cpus 3 \
+  -v "$PWD/out":/out \
+  -e GIT_URL="https://github.com/Obolrom/Gradle_vs_Bazel.git" \
+  -e GIT_REF="main" \
+  -e GRADLE_TASK=":app:assembleDebug" \
+  -e GRADLE_ARGS="--max-workers=3" \
+  android-builder
+```
+
+#### Build docker image
+```bash
+docker build -t android-builder .
 ```
