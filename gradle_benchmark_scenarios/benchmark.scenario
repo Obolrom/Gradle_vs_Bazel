@@ -20,8 +20,8 @@ incremental_feature_feat1 {
 
   apply-abi-change-to = "feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt"
 
-  warm-ups = 3
-  iterations = 5
+  warm-ups = 6
+  iterations = 15
 }
 
 no_op {
@@ -29,8 +29,8 @@ no_op {
 
   tasks = [":app:assembleDebug"]
 
-  warm-ups = 3
-  iterations = 5
+  warm-ups = 6
+  iterations = 15
 }
 
 incremental_core_feature_app {
@@ -42,6 +42,6 @@ incremental_core_feature_app {
   apply-abi-change-to = "feature/feat1/src/main/java/com/romix/feature/feat1/Feat1.kt"
   apply-abi-change-to = "app/src/main/java/com/romix/build/gradle_vs_bazel/MainActivity.kt"
 
-  warm-ups = 3
-  iterations = 5
+  warm-ups = 6
+  iterations = 15
 }
