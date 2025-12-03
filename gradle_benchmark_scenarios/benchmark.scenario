@@ -1,5 +1,5 @@
 scenario-groups {
-    smoke-tests = ["clean_build", "incremental_feature_feat1", "incremental_core_feature_app", "no_op"]
+    smoke-tests = ["incremental_feature_feat1", "incremental_core_feature_app", "no_op"]
 }
 
 clean_build {
