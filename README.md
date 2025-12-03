@@ -29,3 +29,15 @@ gradle-profiler --benchmark --project-dir . --gradle-user-home ~/.gradle --profi
 ```bash
 gradle-profiler --benchmark --project-dir . --bazel --scenario-file bazel_benchmark_scenarios/benchmark.scenario
 ```
+
+---
+### Build with docker
+```bash
+docker run --rm \
+  -v "$PWD":/workspace \
+  -v "$PWD/out":/out \
+  -v "$HOME/.gradle":/gradle \
+  -e GRADLE_TASK=":app:assembleDebug" \
+  -e GRADLE_ARGS="--no-configuration-cache" \
+  android-builder
+```
